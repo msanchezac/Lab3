@@ -6,7 +6,12 @@ class Agenda():
         self.__no_reg = 0
 
 def agregar(Usuario u):
-        pass
+        if buscar(u.getId()) != -1:
+            return False
+        else:
+            __registro.append(u)
+            no_reg += 1
+            return True
 
     def buscar(id): #Método buscar, recibe como parametros el id del usuario
         id_buscado = id #Variable que almacena el id que queremos comparar
