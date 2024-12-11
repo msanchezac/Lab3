@@ -1,5 +1,4 @@
-from Clases.Usuario import Usuario
-
+from Clases.Usuario import *
 
 class Agenda():
     def __init__(self, registro, no_reg):
