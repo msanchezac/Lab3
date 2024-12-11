@@ -35,7 +35,9 @@ class Agenda():
     def toFile(Usuario u):
         fichero = open("agenda.txt", "w")
         for i in range(self.__no_reg):
-            self.__registro[i]
+           linea = Usuario.__str__(self.__registro[i])
+           fichero.write(linea + "\n")
+        fichero.close()
             
             
                 
