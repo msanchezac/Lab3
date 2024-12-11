@@ -4,7 +4,7 @@ class Agenda():
     def __init__(self, registro, no_reg):
         self.__registro = []
         self.__no_reg = 0
-
+        
     def buscar(id): #Método buscar, recibe como parametros el id del usuario
         id_buscado = id #Variable que almacena el id que queremos comparar
         for ids in range(__no_reg): #Ciclo que recorre el arreglo hasta los objetos que hayamos decidido meter en el
@@ -31,6 +31,12 @@ class Agenda():
             __registro[no_reg-1] = None #El ultimo valor del arreglo ya no esta pues todo fue ocupado por los demas valores
             __no_reg -= 1 #Disminuimos el tamaño del arreglo
             return True #Devolvemos Verdadero tras haberse completado todo el proceso
+        
+    def toFile(Usuario u):
+        fichero = open("agenda.txt", "w")
+        for i in range(Agenda.__no_reg):
+            Agenda.__registro[i]
+            
                 
 
     
