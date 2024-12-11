@@ -39,8 +39,8 @@ class Agenda():
            linea = Usuario.__str__(self.__registro[i])
            fichero.write(linea + "\n")
         fichero.close()
-            
-            
+    
+   
 
 
     
