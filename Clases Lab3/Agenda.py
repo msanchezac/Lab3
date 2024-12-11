@@ -22,16 +22,15 @@ class Agenda():
             return True #Retorna True porque el nuevo objeto fue agregado con exito
     
     def eliminar(id): #Método que elimina objetos
-        if buscar(u.getId()) == -1: #Usando el método buscar se fija si el objeto esta en el arreglo, si no esta retorna Falso
+        if buscar(id) == -1: #Usando el método buscar se fija si el objeto esta en el arreglo, si no esta retorna Falso
             return False #Retorna Falso porque no se encontraba el objeto
         else: #En caso de que el objeto este
-            registro.remove(u) #Se elimina del arreglo
-            despla = no_reg[u] #Aqui empieza el desplazamiento dando a la variable despla el valor del indice del objeto eliminado
-            for despla in range(no_reg): #Se empieza a iterar desde el indice del objeto eliminado
-                registro[despla] = registro[despla+1] #Se mueven los objetos hacia la ¿izquierda?
-                registro[no_reg-1] = None #El ultimo valor del arreglo ya no esta pues todo fue ocupado por los demas valores
-                no_reg -= 1 #Disminuimos el tamaño del arreglo
-                return True #Devolvemos Verdadero tras haberse completado todo el proceso
+            indice_eliminado = buscar(id)
+            for i in range(indice_eliminado, no_reg-2): #Se empieza a iterar desde el indice del objeto eliminado
+                registro[i] = registro[i+1] #Se mueven los objetos hacia la ¿izquierda?
+            registro[no_reg-1] = None #El ultimo valor del arreglo ya no esta pues todo fue ocupado por los demas valores
+            no_reg -= 1 #Disminuimos el tamaño del arreglo
+            return True #Devolvemos Verdadero tras haberse completado todo el proceso
                 
 
     
