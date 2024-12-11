@@ -1,4 +1,5 @@
-from Clases.Usuario import *
+from Clases.Usuario import Usuario
+
 
 class Agenda():
     def __init__(self, registro, no_reg):
@@ -13,7 +14,7 @@ class Agenda():
         else: #En caso de no haberse encontrado comparación similar
             return -1 #Retornamos menos uno
 
-    def agregar(Usuario u):
+    def agregar(u):
         if buscar(u.getId()) != -1: #Tomamos el id del usuario y se lo pasamos al método buscar, si este obtiene un valor diferente de menos 1 retornara False
             return False #Retorna False pues el objeto ya pertenece al arreglo
         else:
@@ -32,7 +33,7 @@ class Agenda():
             self.__no_reg -= 1 #Disminuimos el tamaño del arreglo
             return True #Devolvemos Verdadero tras haberse completado todo el proceso
         
-    def toFile(Usuario u):
+    def toFile(u):
         fichero = open("agenda.txt", "w")
         for i in range(self.__no_reg):
            linea = Usuario.__str__(self.__registro[i])
@@ -40,6 +41,6 @@ class Agenda():
         fichero.close()
             
             
-                
+
 
     
